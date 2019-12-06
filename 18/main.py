@@ -13,8 +13,8 @@ def tick(grid):
     height = len(grid)
     width = len(grid[0])
     result = copy.deepcopy(grid)
-    for i in range(height):
-        for j in range(width):
+    for i in range(width):
+        for j in range(height):
             if grid[j][i]:
                 result[j][i] = neighbor_count(i,j) in (2,3)
             else:
